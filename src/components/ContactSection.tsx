@@ -64,7 +64,11 @@ const ContactSection: React.FC = () => {
           send me an email. I&apos;m always excited to discuss new ideas.
         </p>
 
-        <form onSubmit={handleSubmit} action="https://formspree.io/f/xkgbqwkb">
+         <form
+          onSubmit={handleSubmit}
+          action={process.env.NEXT_PUBLIC_FORMSPREE_URL}
+          method="POST"
+        >
           <div className="grid grid-cols-1 gap-6">
             <input
               type="text"
