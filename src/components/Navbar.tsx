@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
                 className="text-2xl font-bold text-[#3EB489] hover:text-[#3EB489]/80 transition-colors"
               >
 
-                RAG • My Portfolio
+                raihan-akbar.dev
               </Link>
             </div>
             <div className="hidden md:block">

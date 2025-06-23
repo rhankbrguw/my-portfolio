@@ -30,26 +30,57 @@ const projectData = [
 ];
 
 const ProjectsSection: React.FC = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  } as const;
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  } as const;
+
   return (
-    <motion.section
-      id="projects"
-      className="py-20 sm:py-24 bg-panel px-4 sm:px-6 lg:px-8"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-    >
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12 sm:text-4xl text-accent">
+    <section id="projects" className="py-20 px-6 bg-black">
+      <motion.div
+        className="max-w-6xl mx-auto"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={containerVariants}
+      >
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+          variants={itemVariants}
+        >
           My Projects
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        </motion.h2>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {projectData.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+            <motion.div
+              key={project.title}
+              variants={itemVariants}
+              className="h-full"
+            >
+              <ProjectCard {...project} />
+            </motion.div>
           ))}
         </div>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 };
 

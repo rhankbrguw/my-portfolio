@@ -4,10 +4,12 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { URL } from "url";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://raihan-akbar-portfolio.vercel.app"),
   title: "Raihan Akbar Gunawan | Portfolio",
   description:
     "A portfolio for Raihan Akbar Gunawan, a Computer Science student and developer crafting clean, efficient, and user-friendly applications.",

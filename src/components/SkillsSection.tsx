@@ -66,29 +66,48 @@ const skills = [
 ];
 
 const SkillsSection: React.FC = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05,
+      },
+    },
+  } as const;
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  } as const;
+
   return (
-    <motion.section
-      id="skills"
-      className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-    >
-      <h2 className="text-3xl font-bold text-center mb-12 sm:text-4xl text-accent">
+    <section id="skills" className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8">
+      <motion.h2
+        className="text-3xl font-bold text-center mb-12 sm:text-4xl text-accent"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         My Tech Stack
-      </h2>
-      <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+      </motion.h2>
+
+      <motion.div
+        className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+      >
         {skills.map((skill) => (
-          <SkillTag
-            key={skill.name}
-            name={skill.name}
-            icon={skill.icon}
-            url={skill.url}
-          />
+          <motion.div key={skill.name} variants={itemVariants}>
+            <SkillTag name={skill.name} icon={skill.icon} url={skill.url} />
+          </motion.div>
         ))}
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 };
 
