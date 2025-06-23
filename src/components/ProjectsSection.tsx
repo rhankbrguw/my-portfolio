@@ -58,7 +58,6 @@ const ProjectsSection: React.FC = () => {
         className="max-w-6xl mx-auto"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
         variants={containerVariants}
       >
         <motion.h2

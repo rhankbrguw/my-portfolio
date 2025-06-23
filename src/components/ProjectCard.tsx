@@ -20,8 +20,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   githubUrl,
   liveUrl,
 }) => {
+  const handleCardClick = () => {
+    window.open(githubUrl, "_blank", "noopener,noreferrer");
+  };
+
   return (
-    <div className="bg-[#1A1A1A] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#3EB489]/20 hover:-translate-y-2 h-full flex flex-col">
+    <div
+      className="bg-[#1A1A1A] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#3EB489]/20 hover:-translate-y-2 h-full flex flex-col cursor-pointer"
+      onClick={handleCardClick}
+    >
       <div className="relative w-full h-48">
         <Image src={imageUrl} alt={title} fill className="object-cover" />
       </div>
@@ -48,6 +55,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
             className="flex items-center gap-2 text-[#E5E5E5] hover:text-[#3EB489] transition-colors font-semibold"
           >
             <Github size={20} />
@@ -58,6 +66,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
               className="text-[#3EB489] font-bold hover:underline"
             >
               Live Demo
