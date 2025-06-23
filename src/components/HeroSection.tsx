@@ -23,7 +23,7 @@ const HeroSection: React.FC = () => {
               1500,
               "I Build Things for the Web.",
               1500,
-              "Connect With Me!.",
+              "Connect With Me!",
               1500,
             ]}
             wrapper="h1"
