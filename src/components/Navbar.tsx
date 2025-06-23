@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <header className="w-full bg-background/80 backdrop-blur-sm fixed top-0 z-50 border-b border-white/10">
+      <header className="w-full bg-background/80 backdrop-blur-sm fixed top-0 z-50">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-3">
@@ -86,24 +86,9 @@ const Navbar: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-black/95 backdrop-blur-lg md:hidden"
+            className="fixed inset-0 z-40 bg-black/40 backdrop-blur-md md:hidden"
           >
             <div className="flex flex-col items-center justify-center h-full pt-16 space-y-8">
-              <div className="flex items-center space-x-4 mb-8">
-                <div className="relative w-16 h-16 rounded-full overflow-hidden ring-2 ring-[#3EB489]/30">
-                  <Image
-                    src="/pp.png"
-                    alt="Samaele13 Profile"
-                    fill
-                    className="object-cover"
-                    sizes="64px"
-                  />
-                </div>
-                <span className="text-2xl font-semibold text-white">
-                  Samaele13
-                </span>
-              </div>
-
               {navLinks.map((link, index) => (
                 <motion.div
                   key={link.name}
@@ -114,7 +99,7 @@ const Navbar: React.FC = () => {
                   <Link
                     href={link.href}
                     onClick={closeMenu}
-                    className="text-gray-300 hover:text-[#3EB489] block px-6 py-3 rounded-lg text-xl font-medium transition-all duration-300 hover:bg-white/5"
+                    className="text-gray-300 active:text-[#3EB489] block px-6 py-3 rounded-lg text-xl font-medium transition-all duration-300 active:bg-white/5"
                   >
                     {link.name}
                   </Link>
