@@ -12,6 +12,7 @@ const projectData = [
     imageUrl: "/rumah-kosim.png",
     techStack: ["SvelteKit", "Tailwind CSS", "JWT", "bcrypt", "MySQL"],
     githubUrl: "https://github.com/Samaele13/rumah-kosim-sveltekit",
+    liveUrl: "https://rumah-kosim-books.up.railway.app/",
   },
   {
     title: "El Ngadu - Public Complaint App",
