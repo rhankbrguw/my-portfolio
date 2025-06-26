@@ -39,14 +39,14 @@ const Navbar: React.FC = () => {
               >
                 <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-[#3EB489]/20 transition-all duration-300">
                   <Image
-                    src="/pp.png"
+                    src="/pp.jpg"
                     alt="Samaele13 Profile"
                     fill
                     className="object-cover"
                     sizes="40px"
                   />
                 </div>
-                <span className="text-lg font-semibold text-white transition-colors duration-300">
+                <span className="text-lg font-semibold text-gray-500 hover:text-gray-600 transition-colors duration-300">
                   Samaele13
                 </span>
               </Link>
