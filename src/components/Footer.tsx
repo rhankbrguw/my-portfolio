@@ -11,9 +11,9 @@ const Footer: React.FC = () => {
           <p className="text-sm text-[#E5E5E5]">
             &copy; {currentYear} Raihan Akbar Gunawan. All Rights Reserved.
           </p>
-          <p className="text-xs text-gray-400 mt-1">
+          {/* <p className="text-xs text-gray-400 mt-1">
             Built with Next.js, TypeScript, and Tailwind CSS.
-          </p>
+          </p> */}
         </div>
         <div className="flex space-x-6">
           <a
