@@ -11,7 +11,7 @@ const projectData = [
       "A full-stack web application for managing books, built with SvelteKit, featuring user authentication and a robust book management system.",
     imageUrl: "/rumah-kosim.png",
     techStack: ["SvelteKit", "Tailwind CSS", "JWT", "bcrypt", "MySQL"],
-    githubUrl: "https://github.com/Samaele13/rumah-kosim-sveltekit",
+    githubUrl: "https://github.com/rhankbrguw/rumah-kosim-sveltekit",
     liveUrl: "https://rumah-kosim-books.up.railway.app/",
   },
   {
@@ -26,7 +26,8 @@ const projectData = [
       "Tailwind CSS",
       "Shadcn UI",
     ],
-    githubUrl: "https://github.com/Samaele13/el-ngadu",
+    githubUrl: "https://github.com/rhankbrguw/el-ngadu",
+    liveUrl: "https://el-ngadu.noxturne.my.id/",
   },
 ];
 

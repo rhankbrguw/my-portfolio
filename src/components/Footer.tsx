@@ -11,13 +11,10 @@ const Footer: React.FC = () => {
           <p className="text-sm text-[#E5E5E5]">
             &copy; {currentYear} Raihan Akbar Gunawan. All Rights Reserved.
           </p>
-          {/* <p className="text-xs text-gray-400 mt-1">
-            Built with Next.js, TypeScript, and Tailwind CSS.
-          </p> */}
         </div>
         <div className="flex space-x-6">
           <a
-            href="https://github.com/Samaele13"
+            href="https://github.com/rhankbrguw"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#E5E5E5] hover:text-[#3EB489] transition-colors"
