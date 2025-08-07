@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
                   />
                 </div>
                 <span className="text-lg font-semibold text-gray-500 hover:text-gray-600 transition-colors duration-300">
-                  Samaele13
+                  rhankbrguw_
                 </span>
               </Link>
             </div>
