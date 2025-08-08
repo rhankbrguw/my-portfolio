@@ -95,7 +95,7 @@ const SkillsSection: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        My Tech Stack
+        Tech Stack
       </motion.h2>
 
       <motion.div
