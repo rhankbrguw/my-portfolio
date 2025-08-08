@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -40,20 +40,20 @@ const Navbar: React.FC = () => {
                 <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-[#3EB489]/20 transition-all duration-300">
                   <Image
                     src="/pp.jpg"
-                    alt="Samaele13 Profile"
+                    alt="rhankbrguw Profile"
                     fill
                     className="object-cover"
                     sizes="40px"
                   />
                 </div>
-                <span className="text-lg font-semibold text-gray-500 hover:text-gray-600 transition-colors duration-300">
+                <span className="text-lg font-semibold text-gray-400 group-hover:text-white transition-colors duration-300">
                   rhankbrguw_
                 </span>
               </Link>
             </div>
 
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-center space-x-1">
+            <div className="hidden md:flex items-center">
+              <div className="flex items-center space-x-1">
                 {navLinks.map((link) => (
                   <Link
                     key={link.name}
@@ -64,6 +64,14 @@ const Navbar: React.FC = () => {
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#3EB489] group-hover:w-full transition-all duration-300"></span>
                   </Link>
                 ))}
+                <a
+                  href="/CV-Raihan-Akbar-Gunawan.pdf"
+                  download
+                  aria-label="Download CV"
+                  className="text-gray-300 hover:text-[#3EB489] hover:bg-white/5 p-2 rounded-lg transition-all duration-300 ml-2"
+                >
+                  <Download size={20} />
+                </a>
               </div>
             </div>
 
@@ -88,7 +96,7 @@ const Navbar: React.FC = () => {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 bg-black/40 backdrop-blur-md md:hidden"
           >
-            <div className="flex flex-col items-center justify-center h-full pt-16 space-y-8">
+            <div className="flex flex-col items-center justify-center h-full pt-16 space-y-6">
               {navLinks.map((link, index) => (
                 <motion.div
                   key={link.name}
@@ -105,6 +113,23 @@ const Navbar: React.FC = () => {
                   </Link>
                 </motion.div>
               ))}
+              <motion.div
+                key="download-cv"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: navLinks.length * 0.1 + 0.2 }}
+                className="pt-4"
+              >
+                <a
+                  href="/CV-Raihan-Akbar-Gunawan.pdf"
+                  download
+                  onClick={closeMenu}
+                  className="text-gray-300 active:text-[#3EB489] flex items-center gap-3 px-6 py-3 rounded-lg text-xl font-medium transition-all duration-300 active:bg-white/5"
+                >
+                  <Download size={22} />
+                  Download CV
+                </a>
+              </motion.div>
             </div>
           </motion.div>
         )}

@@ -63,16 +63,16 @@ const HeroSection: React.FC = () => {
               sequence={[
                 "Hello, I'm Raihan Akbar Gunawan.",
                 2000,
-                "I'm a Computer Science Student.",
+                "Undergraduate Computer Science Student.",
                 2000,
-                "I Build Things for the Web.",
+                "I Build Things.",
                 2000,
                 "Connect With Me!",
                 2000,
               ]}
               wrapper="h1"
-              speed={50}
-              className="text-2xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl leading-tight drop-shadow-2xl"
+              speed={60}
+              className="text-3xl font-extrabold tracking-tight text-white md:text-4xl lg:text-5xl leading-tight drop-shadow-2xl"
               repeat={Infinity}
             />
           </motion.div>
@@ -118,6 +118,7 @@ const HeroSection: React.FC = () => {
               </span>
               <div className="w-8 sm:w-12 h-px bg-gradient-to-l from-transparent to-white/50"></div>
             </div>
+
           </motion.div>
         </motion.div>
       </div>
