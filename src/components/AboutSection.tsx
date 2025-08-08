@@ -54,7 +54,7 @@ const AboutSection: React.FC = () => {
   return (
     <section
       id="about"
-      className="bg-panel pt-16 pb-20 sm:pt-20 sm:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="bg-black pt-16 pb-20 sm:pt-20 sm:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       <motion.h2
         className="text-3xl font-bold mb-8 text-center sm:text-4xl text-accent md:hidden"

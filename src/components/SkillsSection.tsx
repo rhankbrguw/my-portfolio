@@ -85,7 +85,10 @@ const SkillsSection: React.FC = () => {
   } as const;
 
   return (
-    <section id="skills" className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8">
+    <section
+      id="skills"
+      className="bg-panel py-20 sm:py-24 px-4 sm:px-6 lg:px-8"
+    >
       <motion.h2
         className="text-3xl font-bold text-center mb-12 sm:text-4xl text-accent"
         initial={{ opacity: 0, y: 20 }}

@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
             href="https://github.com/rhankbrguw"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#E5E5E5] hover:text-[#3EB489] transition-colors"
+            className="text-[#E5E5E5] hover:text-[#3EB489] transition-colors duration-300"
           >
             <Github size={24} />
           </a>
@@ -25,13 +25,13 @@ const Footer: React.FC = () => {
             href="https://www.linkedin.com/in/raihan-akbar-2b5820334/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#E5E5E5] hover:text-[#3EB489] transition-colors"
+            className="text-[#E5E5E5] hover:text-[#3EB489] transition-colors duration-300"
           >
             <Linkedin size={24} />
           </a>
           <a
             href="mailto:raihanakbarg28@gmail.com"
-            className="text-[#E5E5E5] hover:text-[#3EB489] transition-colors"
+            className="text-[#E5E5E5] hover:text-[#3EB489] transition-colors duration-300"
           >
             <Mail size={24} />
           </a>
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
             href="https://www.instagram.com/rhankbrguw_/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#E5E5E5] hover:text-[#3EB489] transition-colors"
+            className="text-[#E5E5E5] hover:text-[#3EB489] transition-colors duration-300"
           >
             <Instagram size={24} />
           </a>

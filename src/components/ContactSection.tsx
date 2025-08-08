@@ -124,7 +124,7 @@ const ContactSection: React.FC = () => {
   return (
     <section
       id="contact"
-      className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-black"
+      className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-black mb-0 pb-0"
     >
       <motion.div
         className="max-w-2xl mx-auto text-center"
@@ -133,7 +133,7 @@ const ContactSection: React.FC = () => {
         whileInView="visible"
       >
         <motion.h2
-          className="text-3xl font-bold mb-4 sm:text-4xl"
+          className="text-3xl font-bold mb-4 sm:text-4xl text-white"
           variants={itemVariants}
         >
           Let&apos;s Connect
