@@ -90,19 +90,21 @@ const SkillsSection: React.FC = () => {
       className="bg-panel py-20 sm:py-24 px-4 sm:px-6 lg:px-8"
     >
       <motion.h2
-        className="text-3xl font-bold text-center mb-12 sm:text-4xl text-accent"
+        className="text-2 xl font-bold text-center mb-12 sm:text-4xl text-accent"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        Tech Stack
+        My Tech Stack
       </motion.h2>
 
       <motion.div
-        className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5"
+        className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-5"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
+        viewport={{ once: true }}
       >
         {skills.map((skill) => (
           <motion.div key={skill.name} variants={itemVariants}>

@@ -50,13 +50,13 @@ const HeroSection: React.FC = () => {
 
       <div className="hero-content w-full px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="max-w-6xl mx-auto flex flex-col items-center text-center md:items-start md:text-left"
+          className="max-w-6xl mx-auto flex flex-col items-center text-center lg:items-start lg:text-left"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           <motion.div
-            className="h-[120px] sm:h-[140px] md:h-[160px] lg:h-[180px] flex items-center mb-4"
+            className="h-[140px] sm:h-[160px] md:h-[180px] flex items-center mb-4"
             variants={itemVariants}
           >
             <TypeAnimation
@@ -72,13 +72,13 @@ const HeroSection: React.FC = () => {
               ]}
               wrapper="h1"
               speed={60}
-              className="text-3xl font-extrabold tracking-tight text-white md:text-4xl lg:text-5xl leading-tight drop-shadow-2xl"
+              className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight drop-shadow-2xl"
               repeat={Infinity}
             />
           </motion.div>
 
-          <motion.div variants={itemVariants} className="max-w-3xl mb-6 px-2">
-            <p className="text-base md:text-xl lg:text-2xl text-gray-200 leading-relaxed drop-shadow-lg">
+          <motion.div variants={itemVariants} className="max-w-2xl mb-6 px-2">
+            <p className="text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed drop-shadow-lg">
               A Computer Science student crafting clean, efficient, and
               user-friendly applications from concept to deployment.
             </p>
@@ -86,7 +86,7 @@ const HeroSection: React.FC = () => {
 
           <motion.div
             variants={itemVariants}
-            className="flex flex-col items-center gap-4 w-full max-w-sm sm:max-w-none sm:flex-row sm:justify-center md:justify-start"
+            className="flex flex-col items-center gap-4 w-full max-w-sm sm:max-w-none sm:flex-row sm:justify-center lg:justify-start"
           >
             <motion.div variants={buttonVariants} className="w-full sm:w-auto">
               <Link
@@ -109,16 +109,15 @@ const HeroSection: React.FC = () => {
 
           <motion.div
             variants={itemVariants}
-            className="mt-8 text-center md:text-left"
+            className="mt-8 text-center lg:text-left"
           >
-            <div className="flex items-center justify-center md:justify-start space-x-4 text-white/70">
+            <div className="flex items-center justify-center lg:justify-start space-x-4 text-white/70">
               <div className="w-8 sm:w-12 h-px bg-gradient-to-r from-transparent to-white/50"></div>
               <span className="text-xs sm:text-sm font-medium tracking-wider uppercase">
                 Scroll to explore
               </span>
               <div className="w-8 sm:w-12 h-px bg-gradient-to-l from-transparent to-white/50"></div>
             </div>
-
           </motion.div>
         </motion.div>
       </div>

@@ -69,7 +69,7 @@ const ProjectsSection: React.FC = () => {
           My Projects
         </motion.h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           {projectData.map((project) => (
             <motion.div
               key={project.title}
