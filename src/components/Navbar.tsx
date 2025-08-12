@@ -69,6 +69,7 @@ const Navbar: React.FC = () => {
                   download
                   aria-label="Download CV"
                   className="text-gray-300 hover:text-[#3EB489] hover:bg-white/5 p-2 rounded-lg transition-all duration-300 ml-2"
+                  title="Download CV"
                 >
                   <Download size={20} />
                 </a>
