@@ -65,6 +65,9 @@ const ProjectsSection: React.FC = () => {
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-white text-center mb-16"
           variants={itemVariants}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
         >
           My Projects
         </motion.h2>

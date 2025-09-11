@@ -135,6 +135,9 @@ const ContactSection: React.FC = () => {
         <motion.h2
           className="text-3xl font-bold mb-4 sm:text-4xl text-white"
           variants={itemVariants}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
           Let&apos;s Connect
         </motion.h2>

@@ -93,7 +93,6 @@ const SkillsSection: React.FC = () => {
         className="text-2 xl font-bold text-center mb-12 sm:text-4xl text-accent"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
         My Tech Stack
@@ -104,7 +103,6 @@ const SkillsSection: React.FC = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
       >
         {skills.map((skill) => (
           <motion.div key={skill.name} variants={itemVariants}>
