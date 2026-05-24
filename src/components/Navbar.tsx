@@ -15,12 +15,12 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.classList.add("overflow-hidden");
     } else {
-      document.body.style.overflow = "auto";
+      document.body.classList.remove("overflow-hidden");
     }
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.classList.remove("overflow-hidden");
     };
   }, [isOpen]);
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -79,6 +79,8 @@ const Navbar: React.FC = () => {
             <div className="md:hidden">
               <button
                 onClick={toggleMenu}
+                aria-label="Toggle navigation menu"
+                aria-expanded={isOpen}
                 className="inline-flex items-center justify-center p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none transition-all duration-300"
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}

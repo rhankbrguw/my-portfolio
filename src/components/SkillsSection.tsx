@@ -77,17 +77,22 @@ const SkillsSection: React.FC = () => {
   } as const;
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 200,
+        damping: 12,
+      },
     },
   } as const;
 
   return (
     <section
       id="skills"
-      className="bg-panel py-20 sm:py-24 px-4 sm:px-6 lg:px-8"
+      className="relative bg-black/40 backdrop-blur-sm py-20 sm:py-24 px-4 sm:px-6 lg:px-8 z-10"
     >
       <motion.h2
         className="text-2 xl font-bold text-center mb-12 sm:text-4xl text-accent"

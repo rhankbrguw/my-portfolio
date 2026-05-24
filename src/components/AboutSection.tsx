@@ -41,12 +41,15 @@ const AboutSection: React.FC = () => {
   } as const;
 
   const textItemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        type: "spring",
+        stiffness: 100,
+        damping: 15,
+        mass: 0.8,
       },
     },
   } as const;
@@ -54,7 +57,7 @@ const AboutSection: React.FC = () => {
   return (
     <section
       id="about"
-      className="bg-black pt-16 pb-20 sm:pt-20 sm:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative bg-black/30 backdrop-blur-sm pt-16 pb-20 sm:pt-20 sm:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden z-10"
     >
       <motion.h2
         className="text-3xl font-bold mb-8 text-center sm:text-4xl text-accent md:hidden"

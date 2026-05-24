@@ -55,7 +55,7 @@ const ProjectsSection: React.FC = () => {
   } as const;
 
   return (
-    <section id="projects" className="py-20 px-6 bg-black">
+    <section id="projects" className="relative py-20 px-6 bg-black/30 backdrop-blur-sm z-10">
       <motion.div
         className="max-w-6xl mx-auto"
         initial="hidden"

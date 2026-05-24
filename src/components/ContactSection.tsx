@@ -124,7 +124,7 @@ const ContactSection: React.FC = () => {
   return (
     <section
       id="contact"
-      className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-black mb-0 pb-0"
+      className="relative py-20 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-black/40 backdrop-blur-sm mb-0 pb-0 z-10"
     >
       <motion.div
         className="max-w-2xl mx-auto text-center"
